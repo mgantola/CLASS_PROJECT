@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.4.2.6">
+  <Name>vdb</Name>
+  <RootView>CUSTOMER</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <EventsList />
+  <IidFinderProp>
+    <NumberOfPartitions>100</NumberOfPartitions>
+    <NumberOfJobs>50</NumberOfJobs>
+    <OrderValidationTime>00:05:00</OrderValidationTime>
+    <HistoryStoreTime>7.00:00:00</HistoryStoreTime>
+    <DeltaSyncMethod>TimeInterval</DeltaSyncMethod>
+    <DeltaSyncTimeInterval>00:00:00</DeltaSyncTimeInterval>
+  </IidFinderProp>
+  <Tables>
+    <Table>ACTIVITY</Table>
+    <Table>ADDRESS</Table>
+    <Table>BALANCE</Table>
+    <Table>CASE_NOTE</Table>
+    <Table>CASES</Table>
+    <Table>CONTRACT</Table>
+    <Table>CUSTOMER</Table>
+    <Table>SUBSCRIBER</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="ACTIVITY">
+      <Populations>
+        <Population name="query_main_ACTIVITY" order="2" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="ADDRESS">
+      <Populations>
+        <Population name="query_main_ADDRESS" order="2" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="BALANCE">
+      <Populations>
+        <Population name="query_main_BALANCE" order="4" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="CASES">
+      <Populations>
+        <Population name="query_main_CASES" order="3" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="CASE_NOTE">
+      <Populations>
+        <Population name="query_main_CASE_NOTE" order="4" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="CONTRACT">
+      <Populations>
+        <Population name="query_main_CONTRACT" order="2" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="CUSTOMER">
+      <Populations>
+        <Population name="query_main_CUSTOMER" order="1" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="SUBSCRIBER">
+      <Populations>
+        <Population name="query_main_SUBSCRIBER" order="3" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList />
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations>
+    <Relation>
+      <From tableType="TableObject" table="CUSTOMER" column="CUSTOMER_ID" columnId="tblCol_0373d6b113684d42906f19cc207004c0" />
+      <To tableType="TableObject" table="CONTRACT" populationObjectName="query_main_CONTRACT" column="CUSTOMER_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="CUSTOMER" column="CUSTOMER_ID" columnId="tblCol_0373d6b113684d42906f19cc207004c0" />
+      <To tableType="TableObject" table="ACTIVITY" populationObjectName="query_main_ACTIVITY" column="CUSTOMER_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="CUSTOMER" column="CUSTOMER_ID" columnId="tblCol_0373d6b113684d42906f19cc207004c0" />
+      <To tableType="TableObject" table="ADDRESS" populationObjectName="query_main_ADDRESS" column="CUSTOMER_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="ACTIVITY" column="ACTIVITY_ID" columnId="tblCol_f88b11c6563248f89be4872574e4ea46" />
+      <To tableType="TableObject" table="CASES" populationObjectName="query_main_CASES" column="ACTIVITY_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="CASES" column="CASE_ID" columnId="tblCol_e09416d8bb5e4a949ff9c529c3337247" />
+      <To tableType="TableObject" table="CASE_NOTE" populationObjectName="query_main_CASE_NOTE" column="CASE_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="CONTRACT" column="ASSOCIATED_LINE_FMT" columnId="tblCol_86461ce27a424460918cd3ea525bba3b" />
+      <To tableType="TableObject" table="SUBSCRIBER" populationObjectName="query_main_SUBSCRIBER" column="MSISDN" columnId="queryCol_1" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="SUBSCRIBER" column="SUBSCRIBER_ID" columnId="tblCol_cc200b9a101f4f42887558ca17754773" />
+      <To tableType="TableObject" table="BALANCE" populationObjectName="query_main_BALANCE" column="SUBSCRIBER_ID" columnId="queryCol_0" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="6.4.2.6" name="vdb.k2vdb.xml">
+      <Node name="CUSTOMER" pos="11 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CONTRACT" pos="313 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="ACTIVITY" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CASES" pos="615 239" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CASE_NOTE" pos="917 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="ADDRESS" pos="313 414" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="SUBSCRIBER" pos="615 39" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="BALANCE" pos="917 39" size="257 136" listGroupSize="250 100" viewType="Table" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>
