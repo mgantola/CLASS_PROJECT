@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>INVOICE</Name>
+  <ID>tbl_INVOICE</ID>
+  <Columns>
+    <Column name="SUBSCRIBER_ID" id="tblCol_d7f7a12f5a4e43778a8899c11f7412dd" index="0" datatype="Real" />
+    <Column name="INVOICE_ID" id="tblCol_86208477572b4df4994efcd722d487ab" index="1" datatype="Real" mandatory="true" />
+    <Column name="ISSUED_DATE" id="tblCol_718f382a4895467c82558f1144c1ecf0" index="2" datatype="Text" />
+    <Column name="DUE_DATE" id="tblCol_12f94853b8cb45f9970e5b901b4c28d9" index="3" datatype="Text" />
+    <Column name="STATUS" id="tblCol_79380e011dd74a6b974d12c13da9fd0c" index="4" datatype="Text" />
+    <Column name="BALANCE" id="tblCol_cfdd1681090b48cb8f7b10714a4527ae" index="5" datatype="Real" />
+    <Column name="INVOICE_IMAGE" id="tblCol_4851dbddc3af4104b79ee772ca39581a" index="6" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_86208477572b4df4994efcd722d487ab" />
+  </IndexesList>
+  <EnrichmentList>
+    <Enrichment>
+      <Name>Delete_Invoice</Name>
+      <Type>Function</Type>
+    </Enrichment>
+  </EnrichmentList>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <TriggersList />
+</TableObject>

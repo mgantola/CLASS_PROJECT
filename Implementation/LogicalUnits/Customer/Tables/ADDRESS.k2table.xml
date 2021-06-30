@@ -4,13 +4,18 @@
   <ID>tbl_ADDRESS</ID>
   <Columns>
     <Column name="CUSTOMER_ID" id="tblCol_fe8f704f538d4dda8170b5c9fd411ce6" index="0" datatype="Real" />
-    <Column name="ADDRESS_ID" id="tblCol_066c167edb8345d980a539b3702d76fe" index="1" datatype="Real" mandatory="true" />
-    <Column name="STREET_ADDRESS_1" id="tblCol_1c6a5fcad2ac4636995f6c3a05bdb827" index="2" datatype="Text" />
-    <Column name="STREET_ADDRESS_2" id="tblCol_aab6d645f61a4275b61356f5ff036cbc" index="3" datatype="Text" />
-    <Column name="CITY" id="tblCol_fdcb4c61b6d74afe89733da2dc886e47" index="4" datatype="Text" />
-    <Column name="ZIP" id="tblCol_6b01cd0087ad45388c3a813d1f3fa5f1" index="5" datatype="Text" />
-    <Column name="STATE" id="tblCol_2c8717af2bbb42e78c6ba3849d063fd7" index="6" datatype="Text" />
-    <Column name="COUNTRY" id="tblCol_554f2485c7834550aca011cb837f27ea" index="7" datatype="Text" />
+    <Column name="FULL_NAME" id="tblCol_cfbcfddbadfa4ce9a2f41d4a2bcd4d5c" index="1" datatype="text" />
+    <Column name="ADDRESS_ID" id="tblCol_066c167edb8345d980a539b3702d76fe" index="2" datatype="Real" mandatory="true" />
+    <Column name="STREET_ADDRESS_1" id="tblCol_1c6a5fcad2ac4636995f6c3a05bdb827" index="3" datatype="Text" />
+    <Column name="STREET_ADDRESS_2" id="tblCol_aab6d645f61a4275b61356f5ff036cbc" index="4" datatype="Text" />
+    <Column name="CITY" id="tblCol_fdcb4c61b6d74afe89733da2dc886e47" index="5" datatype="Text" />
+    <Column name="ZIP" id="tblCol_6b01cd0087ad45388c3a813d1f3fa5f1" index="6" datatype="Text" />
+    <Column name="STATE" id="tblCol_2c8717af2bbb42e78c6ba3849d063fd7" index="7" datatype="Text" />
+    <Column name="COUNTRY" id="tblCol_554f2485c7834550aca011cb837f27ea" index="8" datatype="Text" />
+    <Column name="LAT" id="tblCol_0c5586a57ee145f49d46d591fa081cd0" index="9" datatype="text" />
+    <Column name="LONG" id="tblCol_fe0e4874fb5e4444b87abe1b7ee76f62" index="10" datatype="text" />
+    <Column name="POP" id="tblCol_822e340c634844d7a7004086c6e52ece" index="11" datatype="integer" />
+    <Column name="INTID" id="tblCol_6ea2257f32974300b683f1471af75f61" index="12" datatype="text" />
   </Columns>
   <IndexesList>
     <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_066c167edb8345d980a539b3702d76fe" />

@@ -20,6 +20,7 @@
     <Table>CASES</Table>
     <Table>CONTRACT</Table>
     <Table>CUSTOMER</Table>
+    <Table>INVOICE</Table>
     <Table>SUBSCRIBER</Table>
   </Tables>
   <TablesProperties>
@@ -58,13 +59,22 @@
         <Population name="query_main_CUSTOMER" order="1" disabled="false" populationType="Regular" />
       </Populations>
     </TableProperties>
+    <TableProperties name="INVOICE">
+      <Populations>
+        <Population name="query_main_INVOICE" order="4" disabled="false" populationType="Regular" />
+      </Populations>
+    </TableProperties>
     <TableProperties name="SUBSCRIBER">
       <Populations>
         <Population name="query_main_SUBSCRIBER" order="3" disabled="false" populationType="Regular" />
       </Populations>
     </TableProperties>
   </TablesProperties>
-  <EnrichmentsOrderList />
+  <EnrichmentsOrderList>
+    <Item order="1" active="true" name="CONTRACT" columnName="INT_PHONE_NO" type="Table" />
+    <Item order="2" active="true" name="CASE_NOTE" columnName="Case_Clean" type="Table" />
+    <Item order="3" active="true" name="INVOICE" columnName="Delete_Invoice" type="Table" />
+  </EnrichmentsOrderList>
   <ReferencesList />
   <Relations />
   <DatabaseRelations>
@@ -96,6 +106,10 @@
       <From tableType="TableObject" table="SUBSCRIBER" column="SUBSCRIBER_ID" columnId="tblCol_cc200b9a101f4f42887558ca17754773" />
       <To tableType="TableObject" table="BALANCE" populationObjectName="query_main_BALANCE" column="SUBSCRIBER_ID" columnId="queryCol_0" />
     </Relation>
+    <Relation>
+      <From tableType="TableObject" table="SUBSCRIBER" column="SUBSCRIBER_ID" columnId="tblCol_cc200b9a101f4f42887558ca17754773" />
+      <To tableType="TableObject" table="INVOICE" populationObjectName="query_main_INVOICE" column="SUBSCRIBER_ID" columnId="queryCol_0" />
+    </Relation>
   </DatabaseRelations>
   <PreVCsSqlScript />
   <PostVCsSqlScript />
@@ -103,14 +117,15 @@
   <LudbProperties />
   <DiagramGraph>
     <Graph version="6.4.2.6" name="vdb.k2vdb.xml">
-      <Node name="CUSTOMER" pos="11 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="CONTRACT" pos="313 14" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="ACTIVITY" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="CASES" pos="615 239" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="CASE_NOTE" pos="917 264" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="ADDRESS" pos="313 414" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="SUBSCRIBER" pos="615 39" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="BALANCE" pos="917 39" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CUSTOMER" pos="11 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CONTRACT" pos="313 64" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="ACTIVITY" pos="313 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CASES" pos="615 364" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CASE_NOTE" pos="917 414" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="ADDRESS" pos="313 464" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="SUBSCRIBER" pos="615 139" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="BALANCE" pos="917 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="INVOICE" pos="917 214" size="257 136" listGroupSize="250 100" viewType="Table" />
     </Graph>
   </DiagramGraph>
 </VirtualDB>

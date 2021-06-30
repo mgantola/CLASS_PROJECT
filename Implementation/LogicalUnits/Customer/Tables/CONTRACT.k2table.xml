@@ -15,7 +15,12 @@
   <IndexesList>
     <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_d22c1e08828749bb8954c4f1f02c240f" />
   </IndexesList>
-  <EnrichmentList />
+  <EnrichmentList>
+    <Enrichment>
+      <Name>INT_PHONE_NO</Name>
+      <Type>Function</Type>
+    </Enrichment>
+  </EnrichmentList>
   <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
     <TruncateBeforeSync>true</TruncateBeforeSync>
   </LazyDataUpdate>

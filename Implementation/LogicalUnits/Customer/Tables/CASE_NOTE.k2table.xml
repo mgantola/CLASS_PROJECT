@@ -11,7 +11,12 @@
   <IndexesList>
     <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_3512360ddb464be39bd237bbd1ce1a08" />
   </IndexesList>
-  <EnrichmentList />
+  <EnrichmentList>
+    <Enrichment>
+      <Name>Case_Clean</Name>
+      <Type>Function</Type>
+    </Enrichment>
+  </EnrichmentList>
   <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
     <TruncateBeforeSync>true</TruncateBeforeSync>
   </LazyDataUpdate>
