@@ -1,0 +1,7 @@
+CREATE TOKEN 'R123' USER 'admin';
+
+CREATE ROLE 'tester' DESCRIPTION 'tester';
+
+ASSIGN ROLE tester TO TOKEN 'R123';
+
+GRANT ALL_WS ON * TO tester; (Customer.1)
