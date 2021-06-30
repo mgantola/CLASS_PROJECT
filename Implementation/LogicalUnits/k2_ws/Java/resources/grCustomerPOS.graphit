@@ -1,0 +1,69 @@
+{
+  "name": "Root",
+  "type": "sqlNonPrepared",
+  "code": "get Customer.${customer_id}",
+  "children": [
+    {
+      "name": "Customer Data",
+      "type": "sql",
+      "code": "Select ADDRESS.FULL_NAME,\n  ADDRESS.LAT||ADDRESS.LONG LATLONG,\n  ADDRESS.CITY,\n  ADDRESS.INTID\nFrom Customer.ADDRESS",
+      "children": [
+        {
+          "name": "Customer Full Name",
+          "type": "variable",
+          "code": "full_name",
+          "serializerSettings": [
+            {
+              "set": "nice",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "name": "Customer City",
+          "type": "variable",
+          "code": "city",
+          "serializerSettings": [
+            {
+              "set": "nice",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "name": "City International ID",
+          "type": "variable",
+          "code": "cityID",
+          "serializerSettings": [
+            {
+              "set": "nice",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "name": "LATLONG",
+          "type": "variable",
+          "code": "LATLONG"
+        },
+        {
+          "name": "Map Link",
+          "type": "function",
+          "code": "\"https://www.google.com/maps/search/?api=l&query\"+LATLONG",
+          "serializerSettings": [
+            {
+              "set": "nice",
+              "value": "true"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "params": [
+    {
+      "name": "customer_id",
+      "dataType": "String"
+    }
+  ]
+}
