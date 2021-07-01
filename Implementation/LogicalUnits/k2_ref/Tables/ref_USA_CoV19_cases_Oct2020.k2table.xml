@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ref_USA_CoV19_cases_Oct2020</Name>
+  <ID>tbl_ref_USA_CoV19_cases_Oct2020</ID>
+  <Columns>
+    <Column name="State" id="tblCol_f8789107ce1e422c8e8fe3e07ac52b1a" index="0" datatype="Text" />
+    <Column name="totalCases" id="tblCol_95efde6da6704b90871bfb49995fb71d" index="1" datatype="Text" />
+    <Column name="confirmedCases" id="tblCol_d648d6843c5746ebb0fb2ddc9fa3ecc3" index="2" datatype="Text" />
+    <Column name="cases_last_7" id="tblCol_850f8e23ceba47d680ec299b59ec28c7" index="3" datatype="Text" />
+    <Column name="cases_per_100K" id="tblCol_9729fcd2640b41b09999357e4f00a174" index="4" datatype="Text" />
+    <Column name="total_fatalities" id="tblCol_79cb0f91ef0b4dd7b338b3a293573200" index="5" datatype="Text" />
+    <Column name="confirmed_fatalities" id="tblCol_df69a2c2b94343b5bfcfec104b3e2932" index="6" datatype="Text" />
+    <Column name="fatalities_last_7" id="tblCol_42dda2c5773544838c05f351608ef6f1" index="7" datatype="Text" />
+    <Column name="fatalities_per_100K" id="tblCol_fb517030936348f68e88f80b433a4d04" index="8" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="TimeInterval" performEvery="00:02:00" syncWaitTimeout="60">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>
