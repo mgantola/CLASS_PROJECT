@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DbQueryItemOfDataTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Customer_NY</Name>
+  <DbConn>CRM_DB</DbConn>
+  <Sql>Select ADDRESS.CUSTOMER_ID
+from main.ADDRESS
+where ADDRESS.STATE = 'NY'</Sql>
+  <IsSqlValid>true</IsSqlValid>
+</DbQueryItemOfDataTable>
